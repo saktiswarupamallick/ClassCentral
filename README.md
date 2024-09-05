@@ -1,1 +1,1 @@
-# ClassCentral
+# CourseHub
