@@ -101,7 +101,7 @@ const EditCourseForm = ({
   ];
 
   return (
-    <div className="bg-gray-100 ">
+    <div className="bg-black ">
       <div className="flex flex-col gap-2  sm:flex-row sm:justify-between mb-7">
         <div className="flex gap-5">
           {routes.map((route) => (

@@ -18,7 +18,7 @@ const AlertBanner = ({
       variant={`${isCompleted ? "complete" : "destructive"}`}
     >
       {isCompleted ? (
-        <Rocket className="h-4 w-4" />
+        <Rocket className="h-4 w-4 " style={{ color: '#84cc16' }} />
       ) : (
         <CircleAlert className="h-4 w-4" />
       )}

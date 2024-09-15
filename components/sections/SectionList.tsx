@@ -71,7 +71,7 @@ const SectionList = ({ items, onReorder, onEdit }: SectionListProps) => {
                   <div
                     {...provided.draggableProps}
                     ref={provided.innerRef}
-                    className="flex items-center bg-[#FFF8EB] rounded-lg text-sm font-medium p-3"
+                    className="flex items-center bg-black rounded-lg text-sm font-medium p-3"
                   >
                     <div {...provided.dragHandleProps}>
                       <Grip className="h-4 w-4 cursor-pointer mr-4 hover:text-lime-500" />

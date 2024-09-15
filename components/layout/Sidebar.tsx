@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart4,NotebookPen ,BookmarkCheck} from "lucide-react";
+import { BarChart4,NotebookPen ,BookmarkCheck,StickyNote} from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -19,6 +19,11 @@ const Sidebar = () => {
       label: "Notetaker",
       path: "/instructor/notes",
     },
+    {
+      icon: <StickyNote />,
+      label: "Notes",
+      path: "/notty",
+    },
   ];
 
   return (
@@ -27,7 +32,7 @@ const Sidebar = () => {
         <Link
           href={route.path}
           key={route.path}
-          className={`flex items-center gap-4 p-3 rounded-lg hover:bg-lime-100
+          className={`flex items-center gap-4 p-3 rounded-lg hover:bg-lime-100 hover:text-black
           ${pathname.startsWith(route.path) && "bg-lime-500 text-white hover:bg-lime-900"}
           `}
         >

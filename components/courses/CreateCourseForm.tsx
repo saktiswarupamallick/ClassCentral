@@ -69,7 +69,7 @@ const CreateCourseForm = ({ categories }: CreateCourseFormProps) => {
   };
 
   return (
-    <div className="p-10 bg-gray-100">
+    <div className="p-10 ">
       <h1 className="text-3xl font-bold border-b-2 border-gray-900 pb-2">
         Set Up the Essentials for Your Course
       </h1>
@@ -135,7 +135,7 @@ const CreateCourseForm = ({ categories }: CreateCourseFormProps) => {
             )}
           />
 
-          <Button type="submit" disabled={!isValid || isSubmitting}>
+          <Button style={{backgroundColor:"white",color:"black"}} type="submit" disabled={!isValid || isSubmitting}>
             {isSubmitting ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (

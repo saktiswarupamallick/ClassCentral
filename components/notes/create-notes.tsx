@@ -61,7 +61,7 @@ const CreateNoteForm = ({ notes }: CreateNoteFormProps) => {
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         try {
             const response = await axios.post("/api/notes", values);
-            router.push(`/instructor/notes`);
+            router.push(`/notty`);
             toast.success("New Note Created");
         } catch (err) {
             console.log("Failed to create new Note", err);
@@ -70,7 +70,7 @@ const CreateNoteForm = ({ notes }: CreateNoteFormProps) => {
     };
 
     return (
-        <div className="p-10 bg-gray-100">
+        <div className="p-10 bg-black">
             <h1 className="text-3xl font-bold border-b-2 border-gray-900 pb-2">
                 Set Up the Essentials for Your Course
             </h1>
@@ -133,7 +133,7 @@ const CreateNoteForm = ({ notes }: CreateNoteFormProps) => {
                             </FormItem>
                         )}
                     />
-                    <Button type="submit" disabled={!isValid || isSubmitting}>
+                    <Button type="submit" style={{backgroundColor:"white",color:"black"}} disabled={!isValid || isSubmitting}>
                         {isSubmitting ? (
                             <Loader2 className="h-4 w-4 animate-spin" />
                         ) : (

@@ -52,7 +52,7 @@ const PublishButton = ({
 
   return (
     <Button
-      variant="outline"
+      variant="complete"
       disabled={disabled || isLoading}
       onClick={onClick}
     >

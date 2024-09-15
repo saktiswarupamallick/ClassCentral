@@ -49,7 +49,7 @@ const Topbar = () => {
     <div className="flex justify-between items-center text-white bg-black mb-14 p-4">
      <Link href="/">
         <Image
-          src="/mainlogo.jpg"
+          src="/mainlogo.png"
           alt="CourseHub Logo"
           width={150}
           height={50}

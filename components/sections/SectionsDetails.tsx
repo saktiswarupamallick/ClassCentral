@@ -81,7 +81,7 @@ const SectionsDetails = ({
       <ReadText value={section.description!} />
 
       {isLocked ? (
-        <div className="px-10 flex flex-col gap-5 items-center bg-[#FFF8EB]">
+        <div className="px-10 flex flex-col gap-5 items-center bg-black">
           <Lock className="h-8 w-8" />
           <p className="text-sm font-bold">
             Video for this section is locked!. Please buy the course to access
@@ -101,7 +101,7 @@ const SectionsDetails = ({
             key={resource.id}
             href={resource.fileUrl}
             target="_blank"
-            className="flex items-center bg-[#FFF8EB] rounded-lg text-sm font-medium p-3"
+            className="flex items-center bg-black rounded-lg text-sm font-medium p-3"
           >
             <File className="h-4 w-4 mr-4" />
             {resource.name}

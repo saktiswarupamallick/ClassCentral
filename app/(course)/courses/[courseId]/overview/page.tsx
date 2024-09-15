@@ -37,13 +37,14 @@ const CourseOverview = async ({ params }: { params: { courseId: string } }) => {
   }
 
   return (
-    <div className="px-6 py-4 flex flex-col gap-5 bg-lime-100  text-sm">
+    <div className="px-4 py-4 flex flex-col gap-5 text-sm  sm:px-6 lg:px-8">
       {/* Top section divided into two parts */}
-      <div className="flex justify-between gap-8">
+      <div className="flex flex-col-reverse lg:flex-row justify-between gap-8">
         {/* Left side: Title, instructor, and description */}
         <div className="flex-1">
-          <h1 className="text-3xl font-bold">{course.title}</h1>
-          <p className="font-medium text-xl">{course.subtitle}</p>
+          <h1 className="text-2xl  sm:text-3xl  font-bold">{course.title}</h1>
+          <hr className="border-t-2 border-gray-300 my-4" />  {/* Horizontal line */}
+          <p className="font-medium text-lg sm:text-xl">{course.subtitle}</p>
 
           <div className="flex gap-2 items-center mt-4">
             <Image
@@ -58,35 +59,33 @@ const CourseOverview = async ({ params }: { params: { courseId: string } }) => {
               className="rounded-full"
             />
             
-            <p className="text-xl font-bold">Mentor:   {instructor.fullName}</p>
+            <p className="text-lg sm:text-xl font-bold">Mentor: {instructor.fullName}</p>
           </div>
 
           {/* Description directly under the instructor's name */}
           <div className="mt-4">
-            
-            <ReadText  value={course.description!} />
-          </div>
-          <div className="flex gap-2 items-center ">
-            <p className="text-xl text-gray-500 font-bold">Level:</p>
-            <p  className="text-2xl font-bold" >{level?.name}</p>
+            <ReadText value={course.description!} />
           </div>
           <div className="flex gap-2 items-center">
-            <p className="font-bold text-gray-500 text-xl">Price:</p>
-            <p className="text-2xl font-bold">₹{course.price}</p>
+            <p className="text-lg sm:text-xl text-gray-500 font-bold">Level:</p>
+            <p className="text-xl sm:text-2xl font-bold">{level?.name}</p>
+          </div>
+          <div className="flex gap-2 items-center">
+            <p className="font-bold text-gray-500 text-lg sm:text-xl">Price:</p>
+            <p className="text-xl sm:text-2xl font-bold">₹{course.price}</p>
           </div>
         </div>
 
-        {/* Right side: Course image, level, and price */}
-        <div className="flex flex-col items-end gap-4">
+        {/* Right side: Course image */}
+        <div className="flex justify-center lg:justify-end items-center lg:items-start">
           <Image
             src="/teacher.jpg"
             alt={course.title}
-            width={400}     
-            height={200}   
+            width={300}     
+            height={150}   
             layout="fixed"  
-            className="rounded-lg "
+            className="rounded-lg"
           />
-          
         </div>
       </div>
     </div>
