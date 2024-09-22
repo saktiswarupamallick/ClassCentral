@@ -10,7 +10,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import axios from "axios";
-import { Loader2, Trash } from "lucide-react";
+import { Loader2, FileX2} from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -56,7 +56,7 @@ const Delete = ({ item, courseId, sectionId }: DeleteProps) => {
           {isDeleting ? (
             <Loader2 className="h-4 w-4 animate-spin" />
           ) : (
-            <Trash className="h-4 w-4" />
+            <FileX2 className="h-8 w-6" />
           )}
         </Button>
       </AlertDialogTrigger>

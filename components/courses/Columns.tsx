@@ -18,7 +18,7 @@ export const columns: ColumnDef<Course>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Title
+          Course Name
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
@@ -32,34 +32,35 @@ export const columns: ColumnDef<Course>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Price
+          Amount
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
     },
     cell: ({ row }) => {
       const price = parseFloat(row.getValue("price"));
-      const formatted = new Intl.NumberFormat("en-US", {
+      const formatted = new Intl.NumberFormat("en-IN", {
         style: "currency",
-        currency: "USD",
+        currency: "INR",
       }).format(price);
-
+    
       return <div>{formatted}</div>;
     },
+    
   },
   {
     accessorKey: "isPublished",
-    header: "Status",
+    header: "Progress",
     cell: ({ row }) => {
       const isPublished = row.getValue("isPublished") || false;
 
       return (
         <Badge
           className={`${
-            isPublished && "bg-lime-500 text-white hover:bg-lime-500"
+            isPublished && "  bg-lime-500 text-white hover:bg-lime-300"
           }`}
         >
-          {isPublished ? "Published" : "Draft"}
+          {isPublished ? "Activated" : "Pending"}
         </Badge>
       );
     },

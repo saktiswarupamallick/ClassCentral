@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "classcentral",
+  title: "BrainLeap",
   description: "Empowering minds, shaping future",
 };
 

@@ -6,7 +6,7 @@ import {
   DropResult,
 } from "@hello-pangea/dnd";
 import { useEffect, useState } from "react";
-import { Grip, Pencil } from "lucide-react";
+import { Grip, Pencil , LayoutPanelTop } from "lucide-react";
 
 interface SectionListProps {
   items: Section[];
@@ -74,7 +74,7 @@ const SectionList = ({ items, onReorder, onEdit }: SectionListProps) => {
                     className="flex items-center bg-black rounded-lg text-sm font-medium p-3"
                   >
                     <div {...provided.dragHandleProps}>
-                      <Grip className="h-4 w-4 cursor-pointer mr-4 hover:text-lime-500" />
+                      <LayoutPanelTop className="h-4 w-4 cursor-pointer mr-4 hover:text-lime-500" />
                     </div>
                     {section.title}
                     <div className="ml-auto">

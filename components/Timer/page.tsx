@@ -113,23 +113,24 @@ const PomodoroTimer: React.FC<TimerProps> = ({ children }) => {
         <div className="text-4xl text-center text-white font-bold mt-4">{formatTime(remainingTime)}</div>
         <div className="text-lg text-center mt-2">{motivationalMessage}</div>
         <div className="flex flex-col items-center mt-8">
-          
+
           <div className="flex space-x-4">
             <input
               type="number"
               placeholder="Focus time (min)"
               value={focusTime}
               onChange={(e) => setFocusTime(parseInt(e.target.value))}
-              className="p-3 border rounded-md w-1/2"
+              className="p-3 border rounded-md w-1/2 text-gray-900"  // Add this class for dark text
             />
             <input
               type="number"
               placeholder="Break time (min)"
               value={breakTime}
               onChange={(e) => setBreakTime(parseInt(e.target.value))}
-              className="p-3 border rounded-md w-1/2"
+              className="p-3 border rounded-md w-1/2 text-gray-900"  // Add this class for dark text
             />
           </div>
+
 
           <div className="flex flex-col justify-center mt-4 space-y-4">
             <div className="flex justify-center space-x-4">
@@ -153,7 +154,7 @@ const PomodoroTimer: React.FC<TimerProps> = ({ children }) => {
               )}
             </div>
           </div>
-          
+
         </div>
       </SheetContent>
     </Sheet>
