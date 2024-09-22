@@ -33,8 +33,7 @@ const PerformancePage = async () => {
             <DataCard value={totalSales} label="Courses Sold" />
           </div>
           <p className="text-sm md:w-1/2">
-            This shows the total number of courses sold by the mentor. Monitoring course sales helps to gauge the demand for the content and provides insights into how well the mentor&apos;s offerings are resonating with students.
-          </p>
+          This shows the total number of courses sold by the mentor. Monitoring course sales helps to gauge the demand for the content and provides insights into how well the mentors offerings are resonating with students.          </p>
         </div>
 
         {/* Chart */}
